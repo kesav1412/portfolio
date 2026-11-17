@@ -235,8 +235,8 @@
 
     <div class="avail rise"><span class="dot"><b id="halo"></b></span>Open to Work</div>
 
-    <a class="cv rise" href="mailto:kesavapandi2000@gmail.com?subject=Resume%20request&body=Hi%20Kesavapandi%2C%20could%20you%20please%20share%20your%20resume%3F">
-      <svg viewBox="0 0 16 16"><rect x="2" y="3.500" width="12" height="9" rx="1.800"/><path d="M2.600 4.800 8 8.800l5.400-4"/></svg>Request CV
+    <a class="cv rise" id="cv" href="#" role="button">
+      <svg viewBox="0 0 16 16"><path d="M8 2v8.500M4.500 7 8 10.500 11.500 7M2.500 13.500h11"/></svg>Download CV
     </a>
 
     <div class="where rise"><svg viewBox="0 0 16 16"><path d="M8 14s4.500-4 4.500-7.500a4.500 4.500 0 0 0-9 0C3.500 10 8 14 8 14z"/><circle cx="8" cy="6.500" r="1.600"/></svg>Based in Chennai, India · open to remote roles</div>
@@ -311,6 +311,7 @@
   </div>
 </div>
 <div id="clock"></div>
+<script src="cv.js" defer></script>
 
 <script>
 (() => {
@@ -371,6 +372,18 @@
     return { from: (how.baseStep + k - 1) % 4, to: (how.baseStep + k) % 4, q: clamp((t - tc) / DUR) };
   }
   let lastKey = '';
+  /* Download CV: the PDF is not a file on the site; it is decoded and built in the browser on click */
+  $('cv').addEventListener('click', e => {
+    e.preventDefault();
+    if (!window.__cv) { location.href = 'mailto:kesavapandi2000@gmail.com?subject=Resume%20request'; return; }
+    const k = 'kv-1412', bin = atob(window.__cv), u = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i) ^ k.charCodeAt(i % k.length);
+    const url = URL.createObjectURL(new Blob([u], { type: 'application/pdf' }));
+    const a = document.createElement('a');
+    a.href = url; a.download = 'Kesavapandi_V_Resume.pdf';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+  });
   $('theme').onclick = () => {
     const r = document.documentElement, t = r.dataset.theme === 'dark' ? 'light' : 'dark';
     r.dataset.theme = t; localStorage.setItem('theme', t);
