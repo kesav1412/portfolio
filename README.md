@@ -10,7 +10,6 @@ Personal portfolio for a backend developer: a single-page bento grid built with 
 - Cards for work experience, education and certification, tech stack, current focus, projects, and "How I work".
 - Light and dark theme toggle that follows the system setting and remembers your choice.
 - Motion driven by one clock: the `currentTime` of a Web Animation, read in a single `requestAnimationFrame` loop. Reduced-motion users get a static page.
-- Download CV button that builds the PDF in the browser from encoded data (see below).
 
 ## Files
 
@@ -19,7 +18,6 @@ Personal portfolio for a backend developer: a single-page bento grid built with 
 | `content.json` | **All the text and links on the page. Edit this to change content.** |
 | `index.html` | Layout, styles and script. Reads `content.json` and fills the page |
 | `kesav.jpg` | Profile photo |
-| `cv.js` | Encoded resume data used by the Download CV button |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 
 ## Run locally
@@ -35,20 +33,6 @@ Then visit http://localhost:8000.
 ## Deploy
 
 The site is hosted on GitHub Pages from the `main` branch, root folder. Push to `main` and it redeploys within about a minute.
-
-## Update the CV
-
-The resume PDF is not stored in the repo. `cv.js` holds it as scrambled base64 text, and the button decodes it on click. To change it, re-encode a new PDF with the same steps:
-
-```python
-import base64
-d = open('Kesavapandi_V_Resume.pdf', 'rb').read()
-k = b'kv-1412'
-x = bytes(b ^ k[i % len(k)] for i, b in enumerate(d))
-open('cv.js', 'w').write('window.__cv="' + base64.b64encode(x).decode() + '";\n')
-```
-
-This stops search engines from indexing the PDF, but it is not security. Anyone who reads the page code can recover the file.
 
 ## Customise
 
