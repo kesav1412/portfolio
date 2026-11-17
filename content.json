@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "Kesavapandi V — Backend Developer",
+    "description": "Backend Developer building scalable APIs with Node.js, TypeScript, PostgreSQL and AWS."
+  },
+
+  "person": {
+    "photo": "kesav.jpg",
+    "photoAlt": "Portrait of Kesavapandi V",
+    "initials": "KV"
+  },
+
+  "hero": {
+    "line1": "Hi I’m Kesavapandi V — I’m a Backend Developer at",
+    "line2": "Skandavel Webtech.",
+    "tagline": "3 years building APIs.",
+    "bio1": "I design scalable APIs and backend systems with Node.js, TypeScript and",
+    "bio2": "PostgreSQL, from geospatial dashboards to AI chatbots powered by Claude."
+  },
+
+  "contact": {
+    "email": "kesavapandi2000@gmail.com",
+    "emailAriaLabel": "Send an email",
+    "linkedinLabel": "LinkedIn",
+    "linkedinUrl": "https://www.linkedin.com/in/kesavapandi-v",
+    "githubLabel": "GitHub",
+    "githubUrl": "https://github.com/kesav1412"
+  },
+
+  "status": "Open to Work",
+  "location": "Based in Chennai, India · open to remote roles",
+
+  "cv": {
+    "label": "Download CV",
+    "fileName": "Kesavapandi_V_Resume.pdf",
+    "fallbackEmailSubject": "Resume request"
+  },
+
+  "ui": {
+    "themeToggleLabel": "Toggle dark mode"
+  },
+
+  "experience": {
+    "title": "Work Experience",
+    "items": [
+      { "title": "Backend Developer", "detail": "Skandavel Webtech, Apr 2026 – now" },
+      { "title": "Associate Backend Developer", "detail": "Skandavel Digital, Apr 2025 – Mar 2026" },
+      { "title": "Backend Developer Trainee", "detail": "Skandavel Digital, Dec 2023 – Mar 2025" }
+    ]
+  },
+
+  "techStack": {
+    "title": "Tech stack",
+    "groups": [
+      { "label": "Languages", "tags": ["JavaScript", "TypeScript", "Python", "SQL"] },
+      { "label": "Backend", "tags": ["Node.js", "NestJS", "FastAPI", "REST APIs"] },
+      { "label": "Data", "tags": ["PostgreSQL", "PostGIS", "Redis"] },
+      { "label": "Cloud", "tags": ["Lambda", "SQS", "Cognito", "Docker", "CI/CD"] },
+      { "label": "AI", "tags": ["Claude", "MCP", "RAG", "Chroma", "Embeddings"] }
+    ]
+  },
+
+  "building": {
+    "title": "Currently building",
+    "items": [
+      { "title": "AI agents with MCP", "detail": "Backend tools exposed to Claude, permission-aware" },
+      { "title": "RAG over custom knowledge", "detail": "Chroma vector DB and embeddings" },
+      { "title": "Voice chat assistants", "detail": "Speech in, spoken answers out" }
+    ]
+  },
+
+  "education": {
+    "title": "Education & certification",
+    "items": [
+      { "title": "BE Mechanical Engineering", "detail": "VV College of Engineering, 2018 – 2022" },
+      { "title": "MBA (Distance Education)", "detail": "Tamil Nadu Open University, expected 2027" },
+      {
+        "title": "Data Science Program",
+        "detail": "Edureka, 2023",
+        "link": {
+          "label": "View certificate",
+          "url": "https://www.edureka.co/certificate/e6c6bc8b49def13b08ca3a96d3458fa7.pdf"
+        }
+      }
+    ]
+  },
+
+  "projects": {
+    "title": "Projects",
+    "items": [
+      { "title": "Centralized AI chatbot", "detail": "MCP + RAG, one shared JWT-secured API" },
+      { "title": "Geospatial risk dashboard", "detail": "UK energy · 10K–50K row exports" },
+      { "title": "Construction management tool", "detail": "UK telecoms · 4 backend modules" },
+      { "title": "Water connection portal", "detail": "UK water utility · customer + back office" }
+    ]
+  },
+
+  "how": {
+    "title": "How I work",
+    "steps": [
+      {
+        "tab": "Step 01",
+        "number": "01",
+        "title": "Understand the need",
+        "text": "I start from the requirement: who uses it, what data it handles and what must not break, so the scope is clear before any code."
+      },
+      {
+        "tab": "Step 02",
+        "number": "02",
+        "title": "Design the APIs",
+        "text": "I define API contracts and PostgreSQL data models first, so frontend, QA and other services can build against a stable interface."
+      },
+      {
+        "tab": "Step 03",
+        "number": "03",
+        "title": "Build and test",
+        "text": "I build in TypeScript or Python, write unit tests for the endpoints and review changes with the team before they ship."
+      },
+      {
+        "tab": "Step 04",
+        "number": "04",
+        "title": "Deploy and support",
+        "text": "I ship through dev, UAT and production, then stay on for post-release fixes and monitoring."
+      }
+    ]
+  }
+}

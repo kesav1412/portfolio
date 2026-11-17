@@ -16,14 +16,15 @@ Personal portfolio for a backend developer: a single-page bento grid built with 
 
 | File | Purpose |
 |---|---|
-| `index.html` | The whole site (markup, styles, script) |
+| `content.json` | **All the text and links on the page. Edit this to change content.** |
+| `index.html` | Layout, styles and script. Reads `content.json` and fills the page |
 | `kesav.jpg` | Profile photo |
 | `cv.js` | Encoded resume data used by the Download CV button |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 
 ## Run locally
 
-Open `index.html` in a browser. To serve it instead:
+The page loads `content.json` with `fetch`, so opening `index.html` by double-click will not work. Serve the folder instead:
 
 ```bash
 python -m http.server 8000
@@ -51,7 +52,8 @@ This stops search engines from indexing the PDF, but it is not security. Anyone 
 
 ## Customise
 
-- Text, links and cards are all in `index.html`.
+- **Text and links:** edit `content.json`: headline, bio, contact links, status, location, work experience, tech stack, current projects, education, projects, and the four "How I work" steps. To add a job, a tag or a project, add another entry to the matching list. The number of "How I work" steps can change too.
+- **Layout and look:** `index.html`.
 - Colours are CSS variables at the top of the `<style>` block, with a separate set for dark mode.
 - Fonts: the page uses Inter if it is installed or placed at `fonts/InterVariable.woff2`, and falls back to the system sans-serif.
 
