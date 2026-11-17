@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kesav1412.github.io/portfolio/sitemap.xml
