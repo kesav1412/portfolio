@@ -62,8 +62,8 @@
   .pbtn svg{width:14px;height:14px;fill:none;stroke:#fff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
   .ctext{font-size:14.5px;font-weight:480;color:var(--ink);white-space:nowrap;transition:color .15s}
   .ctext:hover{color:var(--orange)}
-  .ctext.sec{margin-left:auto;color:var(--ink2)}
-  .ctext.sec + .ctext.sec{margin-left:0}
+  .ctext.sec{color:var(--ink2)}
+  .links{margin-left:auto;display:flex;gap:14px}
 
   .cv{left:1031px;top:287px;width:152px;height:53px;border-radius:999px;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;gap:9px;
     font-size:14.5px;font-weight:500;white-space:nowrap;box-shadow:0 8px 18px -10px rgba(238,106,31,.7);transition:transform .2s,box-shadow .2s}
@@ -168,6 +168,50 @@
     .stack{position:relative;top:auto;left:auto;right:auto;bottom:auto;margin:62px 20px 20px;gap:14px}
     .grp{flex-wrap:wrap;gap:6px 14px}
     .plist{position:relative;top:auto;left:auto;right:auto;bottom:auto;margin:58px 22px 20px;gap:16px}
+
+    .voice{height:auto;min-height:53px;flex-wrap:wrap;row-gap:6px;border-radius:26px;padding:12px 18px 12px 12px}
+    .voice .ctext:not(.sec){flex:1 1 0;min-width:0;overflow-wrap:anywhere;white-space:normal}
+    .links{flex:1 1 100%;margin-left:42px}
+    #c-how{min-height:390px}
+    .how-text{height:240px}
+    .layer h3{font-size:24px;line-height:29px}
+  }
+
+  /* very small screens (smartwatch browsers) */
+  @media (max-width:260px){
+    .stage{padding:12px 10px 24px;gap:10px}
+    .avatar{width:64px;height:64px;border-radius:9px}
+    h1{font-size:18px;line-height:22px}
+    .bio{font-size:12.5px;line-height:18px}
+    .voice{border-radius:18px;padding:10px;gap:8px}
+    .pbtn{width:24px;height:24px}
+    .ctext{font-size:12px}
+    .links{margin-left:0;flex-wrap:wrap;gap:4px 12px}
+    .avail,.cv{width:100%;max-width:none;height:42px;font-size:12.5px}
+    .where{font-size:11px;white-space:normal;align-items:flex-start;line-height:15px}
+    .stage>.theme{right:8px;top:8px!important;width:30px;height:30px}
+    .card{border-radius:12px}
+    .chip{left:10px;top:10px;height:24px;font-size:11px}
+    #c-exp,#c-list,#c-read,#c-edu,#c-photo{min-height:0}
+    #c-exp{min-height:230px}
+    .tl-mask{top:42px;height:180px}
+    .tl-track{left:14px;right:10px}
+    .tl b{font-size:13px;line-height:17px}
+    .tl em{font-size:11px}
+    .tl-static{margin:46px 14px 8px}
+    .stack{margin:46px 12px 14px;gap:10px}
+    .grp{flex-direction:column;align-items:flex-start;gap:4px}
+    .gl{width:auto;font-size:11px}
+    .tags i{font-size:11px;padding:3px 8px}
+    .plist{margin:46px 12px 14px;gap:12px}
+    .plist b{font-size:13px;line-height:16px}
+    .plist em{font-size:11px}
+    #c-how{min-height:440px}
+    .how-text{left:12px;right:12px;top:44px;height:290px}
+    .layer h3{font-size:17px;line-height:21px}
+    .layer p{font-size:12.5px;line-height:18px;margin-top:6px}
+    .seg{left:10px;right:10px;bottom:12px;height:32px}
+    .seg button{font-size:9px}
   }
 </style>
 </head>
@@ -183,8 +227,10 @@
         <svg viewBox="0 0 16 16"><rect x="2" y="3.5" width="12" height="9" rx="1.8"/><path d="M2.6 4.8 8 8.8l5.4-4"/></svg>
       </a>
       <a class="ctext" href="mailto:kesavapandi2000@gmail.com">kesavapandi2000@gmail.com</a>
-      <a class="ctext sec" href="https://www.linkedin.com/in/kesavapandi-v" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="ctext sec" href="https://github.com/kesav1412" target="_blank" rel="noopener">GitHub</a>
+      <span class="links">
+        <a class="ctext sec" href="https://www.linkedin.com/in/kesavapandi-v" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="ctext sec" href="https://github.com/kesav1412" target="_blank" rel="noopener">GitHub</a>
+      </span>
     </div>
 
     <div class="avail rise"><span class="dot"><b id="halo"></b></span>Open to Work</div>
